@@ -1,0 +1,614 @@
+{
+  "bounce": {
+    "profile_csv": {
+      "R_over_w": 3.3501782012976027,
+      "R_peak": 5.866598428663782,
+      "columns": [
+        "r",
+        "Phi",
+        "phi",
+        "V",
+        "V_minus_Vfalse",
+        "w_FWHM",
+        "R_peak"
+      ],
+      "deltaV_corr_dimless": 0.7717624167013758,
+      "deltaV_corr_note": "Uses |V - V_false| deep in the bubble (first row).",
+      "filename": "background_profile.csv",
+      "w_FWHM": 1.7511302611877513,
+      "w_over_R_sq": 0.08909722607742894
+    },
+    "two_field_O4": {
+      "S_E": 1078.0,
+      "benchmark": {
+        "branch": "negative_phi_branch (per bounce paper)",
+        "g_portal": 2.313019,
+        "lambda": 1e-08,
+        "lambda_Phi": 0.1
+      },
+      "vevs_over_Mpl": {
+        "note": "Naming convention: v_brane \u2261 brane(\u03c6) VEV, v_bulk \u2261 bulk(\u03a6) VEV.",
+        "v_brane": 4.2e-05,
+        "v_bulk": 9.9e-05
+      }
+    }
+  },
+  "cosmology_clock": {
+    "alpha_table": {
+      "alpha_at_z_approx_1100": 1.0,
+      "alpha_peak": 1.534,
+      "file": "alpha_table_laneB_gauss_A0p534_zc15500_sig0p3.csv",
+      "grid_note": "Composite logspace grid (24k pts) intended for accurate r_d integration; includes z_d, 1100, zc exactly.",
+      "max_relative_identity_error_E2_mod_vs_alpha2_E2_base": 0.0,
+      "z_at_alpha_peak": 15500.0
+    },
+    "alpha_table_legacy": {
+      "alpha_at_z_approx_1100": 1.0,
+      "alpha_peak": 1.0025455476116032,
+      "file": "alpha_table_laneB_meff_zc15500.csv",
+      "max_relative_identity_error_E2_mod_vs_alpha2_E2_base": 8.552283591042125e-16,
+      "note": "Legacy/coarse diagnostic table; does NOT correspond to the tuned GAUSS amplitude A in gaussian_alpha_fit and is not suitable for accurate r_d integrals.",
+      "z_at_alpha_peak": 15499.999999972446
+    },
+    "baseline_cosmo": {
+      "H0": 72.0,
+      "Neff": 3.046,
+      "Om": 0.322,
+      "Or": 8.05733479050926e-05
+    },
+    "bounce_anchor_scales": {
+      "Lambda_star_eV": 0.72,
+      "v_phys_over_Mpl": 4.2e-05
+    },
+    "gaussian_alpha_fit": {
+      "A": 0.534,
+      "DESI_fullcov_N": 12,
+      "DESI_fullcov_chi2": 20.2779,
+      "H0": 72.0,
+      "Obh2": 0.0224,
+      "Om": 0.322,
+      "matched_r_d_Mpc": 139.902,
+      "note": "Amplitude tied to Lambda*=0.72 eV via energy scale; only onset timing adjusted via GAUSS clock.",
+      "rd_nuisance_fit": {
+        "alpha_best": 1.00968,
+        "chi2_best": 16.1649,
+        "r_d_best_Mpc": 138.5605
+      },
+      "sfv_clock": "gauss",
+      "sigma_ln1pz": 0.3,
+      "zc": 15500.0
+    },
+    "meff_onset": {
+      "indices": {
+        "i_half": 15287,
+        "i_minLam": 277372,
+        "i_peak": 0,
+        "i_star": 277386
+      },
+      "lambda_min_star": 4.794550019854412e-06,
+      "m_eff_star_eV": 1.1099174102582452e-26,
+      "r_values": {
+        "r_half": 4.0020645241927255,
+        "r_minLam": 17.17487640422132,
+        "r_star": 17.66105272230224
+      },
+      "z_c_star": 15466.149495326808
+    },
+    "rd_diagnostics": {
+      "note": "Computed with standard r_d = (c/H0)\u222b_{z_d}^\u221e (c_s/c)/(alpha*E) dz. Intended as internal consistency check vs paper/fit JSON.",
+      "rd_EH_baseline_Mpc": 144.5086540462874,
+      "rd_EH_with_gauss_alpha_Mpc": 139.9019362995841,
+      "z_d_EH": 1022.3916568095416
+    }
+  },
+  "electroweak": {
+    "SFV_scales": {
+      "M_brane_GeV": 16280000000000.0,
+      "M_brane_times_ell_s": 0.713064,
+      "S0_sq": 0.7134842368104914,
+      "ell_s_GeV_inv": 4.38e-14,
+      "ratio_Mell_over_S0_sq": 0.9994110075754862
+    },
+    "SM_gauge_at_mu_match": {
+      "alpha1_match": 0.023539672150164174,
+      "alpha2_match": 0.02336432286566382,
+      "alpha3_match": 0.026804894232391956,
+      "g1_match": 0.5438825648791034,
+      "g2_match": 0.541853061524504,
+      "g3_match": 0.580379389023194,
+      "mu_match_GeV": 16280000000000.0
+    },
+    "approx_unified_coupling": {
+      "alphaU": 0.024569629749406647,
+      "definition": "average of g1^2, g2^2, g3^2 at mu_match",
+      "gU": 0.5556537350622496,
+      "gU_sq": 0.3087510732886286
+    },
+    "gauge_embedding_fit": {
+      "interpretation": "With this kappa_g, the SFV geometric relation would reproduce the approximate unified SM gauge coupling gU at mu_match.",
+      "kappa_g_fit": 0.20057418785487277
+    },
+    "gauge_zero_mode": {
+      "I_A": 0.9110412793654353,
+      "assumption": "sA = sH (gauge width equals Higgs width in string coordinate)",
+      "sA": 0.5140000000000001
+    },
+    "higgs_geometry": {
+      "I4": 0.7761522965008414,
+      "sH": 0.5140000000000001,
+      "yH": 1.02
+    },
+    "mass_embedding": {
+      "I_base_dimless": 289.3111577713362,
+      "I_base_ref": 289.3111577713362,
+      "I_m_geom_GeV2": 3.990116459354067,
+      "alpha_needed_if_mu2_eq_alpha_Im": 1971.6417002208373,
+      "kappa_m_geom": 1.5054861708167824e-26,
+      "kappa_m_req": 2.968279313488159e-23,
+      "mass_scale_sq": 0.01379178214242172,
+      "mu2_geom_ref": 3.9901164593540672,
+      "mu2_req_GeV2": 7867.08,
+      "ratio_geom_over_req": 0.0005071915449384101,
+      "v_geom_GeV": 5.540144721349147
+    },
+    "mu_match_GeV": 16280000000000.0,
+    "quartic_embedding": {
+      "kappa_lambda": 0.11943315818031534,
+      "lambda_5_GeV_inv": 7.336189077414947e-15
+    },
+    "up_sector": {
+      "Y_up": [
+        [
+          0.23259779933927588,
+          0.267831754652198,
+          0.20414131835688443
+        ],
+        [
+          0.12012409634703464,
+          0.12268587878977306,
+          0.02458816720518665
+        ],
+        [
+          0.3495524468118431,
+          0.4263702125150341,
+          0.4730455161916672
+        ]
+      ],
+      "ratios_dimless": [
+        1.0,
+        0.12892282529085886,
+        0.0020055634823384176
+      ],
+      "singular_values_dimless": [
+        0.844679961174936,
+        0.10889852706124571,
+        0.001694059284395484
+      ],
+      "top_overlap_dimless": 0.844679961174936
+    },
+    "warnings": [
+      "top_yukawa_summary.json in this upload set appears to contain inconsistent ell_s units; canonical ell_s is taken from SFV_scales. Keep any legacy summaries separate."
+    ]
+  },
+  "hydrodynamics": {
+    "pipeline": {
+      "scattering_kernel": "bdg_scattering.py currently uses a scalar 1D Schr\u00f6dinger-like proxy R(E). Full BdG system is documented in SFV_Hydrodynamics__Bubble__Wall_Velocity__and_Bogoliubov_Scattering.pdf.",
+      "vw_solver": "compute_vw_full_scattering.py solves v_w from deltaV_corr / integral using chosen kernel."
+    },
+    "sfv_bulk_params": {
+      "a_s": 1e-09,
+      "cs": 297.0,
+      "delta_V_corr": 0.7717624,
+      "ell_mu_m": 9.974008029735558e-11,
+      "m_sfv": 3.56e-27,
+      "n": 8e+27,
+      "rho": 28.6,
+      "xi_heal_m": 7.052688713435088e-11
+    }
+  },
+  "jwst_optional": {
+    "A_eff": 2.750475620756211,
+    "definition": "A_eff = (v_bulk/v_brane)^4 * (w/R)^2",
+    "gamma_k_reference": 0.6,
+    "kcut_reference_hMpc_inv": 0.05,
+    "notes": "This block is not required for core calibration pack; included for completeness.",
+    "purpose": "Optional bounce-anchored large-scale power enhancement used in JWST high-z abundance note."
+  },
+  "meta": {
+    "created_utc": "2025-12-14T18:28:13Z",
+    "model": "SFV_dSB",
+    "notes": "Condensed calibration/derivation pack assembled from uploaded papers/scripts/JSONs + background_profile.csv. All dimensionless quantities are in solver units unless explicitly tagged.",
+    "required_files_for_future_work": [
+      "background_profile.csv",
+      "sfv_dsb_calibration.json",
+      "sfv_dsb_framework.tex"
+    ],
+    "source_files": {
+      "bounce_profile": "background_profile.csv",
+      "cosmology_clock": [
+        "meff_onset_summary.json",
+        "sfv_gauss_rd13991_fit.json",
+        "alpha_table_laneB_meff_zc15500.csv"
+      ],
+      "ew_jsons": [
+        "sfv_match_summary.json",
+        "gauge_zero_mode_summary.json",
+        "sfv_higgs_kappa_summary.json",
+        "sfv_top_yukawa_config.json",
+        "quark_geometry_best.json",
+        "string_sites_best_leptons.json",
+        "string_sites.json",
+        "ew_summary.json"
+      ],
+      "hydro": [
+        "sfv_bulk_params.json",
+        "bdg_scattering.py",
+        "compute_vw_full_scattering.py"
+      ],
+      "transport_jsons": [
+        "transport_params.json",
+        "transport_result.json",
+        "extended_LZ_lambda_params.json",
+        "extended_LZ_lambda_out.json",
+        "lambda_local_LZ_params.json",
+        "lambda_local_LZ_report.json",
+        "xi_overlap_finiteE_params.json",
+        "xi_overlap_finiteE_report.json"
+      ],
+      "yukawa_scan_artifacts": [
+        "sfv_lepton_scan.py",
+        "sfv_quark_scan.py",
+        "extract_string_geometry.py",
+        "yukawa_from_overlaps.py",
+        "ckm_summary.txt",
+        "overlaps_summary.csv"
+      ]
+    }
+  },
+  "transport": {
+    "distributed_LZ": {
+      "inputs": {
+        "Delta_prime": 0.7872034562281804,
+        "FWHM": 1.7511302611877524,
+        "R_peak": 5.866598428663785,
+        "columns_used": {
+          "Phi": "Phi",
+          "phi": "phi",
+          "r": "r"
+        },
+        "csv": "background_profile.csv",
+        "energy_grid": {
+          "Emax": 1.4142857142857144,
+          "Emin": 0.0,
+          "T_reh": 0.2,
+          "nE": 160
+        },
+        "phi_star": 0.37298117761090355,
+        "target_ratio": 5.7,
+        "v_w": 0.3,
+        "xi_span": 5.253390783563257,
+        "xi_star": -0.15120721107004592
+      },
+      "integrals": {
+        "I2_phi2_f2": 5.651339068627404
+      },
+      "note": "lambda0_required is for distributed LZ; lambda_eff_equiv is a local-LZ constant that reproduces the same \u03b4.",
+      "result": {
+        "lambda0_required": 0.03278798618425852,
+        "lambda_eff_equiv": 0.208979415439219
+      }
+    },
+    "finiteE_WKB_overlap": {
+      "energy_grid": {
+        "Emax": 1.1785714285714286,
+        "Emin": 0.0,
+        "T_reh": 0.12,
+        "nE": 120
+      },
+      "inputs": {
+        "Delta_prime": 0.7872034562281804,
+        "FWHM": 1.7511302611877524,
+        "R_peak": 5.866598428663785,
+        "columns_used": {
+          "Phi": "Phi",
+          "phi": "phi",
+          "r": "r"
+        },
+        "csv": "background_profile.csv",
+        "g_portal": 2.313019,
+        "phi_star": 0.37298117761090355,
+        "xi_star": -0.15120721107004592,
+        "y_chi": 1.0
+      },
+      "lambda_tr_eff": {
+        "per_E_mean": 2.238906226404658,
+        "per_E_weighted_MB": 1.9673470793469205
+      },
+      "note": "Finite-energy WKB at the crossing xi*. Use lambda_tr_eff = per_E_weighted_MB. Then run transport_from_profile.py with that lambda and your chosen v_w.",
+      "transport_preview": {
+        "P_chi_to_B_vs_vw": {
+          "0.1": 1.0,
+          "0.3": 0.9999993994512114,
+          "0.5": 0.9998150182102015
+        },
+        "nLSP_over_nB_vs_vw": {
+          "0.1": 0.0,
+          "0.3": 6.005491492464602e-07,
+          "0.5": 0.00018501601439201647
+        }
+      }
+    },
+    "local_LZ_mapping": {
+      "inputs": {
+        "Delta_prime": 0.7872034562281804,
+        "E": 0.2,
+        "FWHM": 1.7511302611877524,
+        "R_peak": 5.866598428663785,
+        "columns_used": {
+          "Phi": "Phi",
+          "phi": "phi",
+          "r": "r"
+        },
+        "csv": "background_profile.csv",
+        "phi_star": 0.37298117761090355,
+        "sigma": 0.7435797287421454,
+        "xi_star": -0.15120721107004592
+      },
+      "note": "Local-LZ mapping of thick-brane mixing. For distributed-LZ without this mapping, use the extended_LZ approach we discussed.",
+      "result": {
+        "lambda_tr_eff_local_LZ": 0.9723803872939605
+      }
+    },
+    "local_LZ_simple": {
+      "definition": {
+        "P_chi_to_B": "P = 1 - exp(-2*pi*delta)",
+        "delta_LZ": "delta = (lambda_eff^2 * phi_*^2)/(v_w * |Delta'_*|)",
+        "ratio_nLSP_over_nB": "(1-P)/P"
+      },
+      "derived_from_profile": {
+        "Delta_prime_at_star": 0.7873385808540938,
+        "phi_star": 0.37298276750107007,
+        "xi_star": -0.15120287242849384
+      },
+      "inputs": {
+        "R0": 5.866598428663782,
+        "columns_used": {
+          "Phi": "Phi",
+          "phi": "phi",
+          "r": "r"
+        },
+        "csv": "background_profile.csv",
+        "lambda_tr_eff": 0.209,
+        "v_w": 0.3,
+        "w": 3.0,
+        "y_B": 1.0,
+        "y_chi": 1.0
+      },
+      "results": {
+        "P_chi_to_B": 0.14925839040304145,
+        "delta_LZ": 0.025726891712928794,
+        "n_LSP_over_n_B": 5.699790861335879
+      }
+    },
+    "portal_parameterization": {
+      "note": "I_chiBH and J_wall are currently placeholder estimates in portal_config.json; replace with derived overlap and wall-factor when available.",
+      "portal_config": {
+        "Delta_prime": 0.787,
+        "I_chiBH": 0.25,
+        "J_wall": 0.8,
+        "M_brane": 16280000000000.0,
+        "ell_s": 4.38e-14,
+        "kappa_LZ": 1.0,
+        "phi_star": 0.373,
+        "target_ratio": 5.4
+      }
+    },
+    "targets": {
+      "note": "Some artifacts use 5.4 vs 5.7; preserve the target used in each run below.",
+      "ratio_DM_over_baryon_target": 5.7
+    }
+  },
+  "units": {
+    "Mpl_GeV": 1.2209e+19,
+    "Mpl_reduced_GeV": 2.435e+18,
+    "note": "Planck-unit VEVs are in M_pl (reduced) unless otherwise specified in source artifacts."
+  },
+  "yukawa_overlap": {
+    "ckm_summary_parsed": {
+      "L_d_misalign": {
+        "theta12": 0.12,
+        "theta13": 0.03,
+        "theta23": 0.01
+      },
+      "Vcb": 0.152493,
+      "Vub": 0.0719822,
+      "Vus": 0.233527,
+      "c_over_t": 0.128923,
+      "costs": {
+        "ckm": 0.0491858,
+        "down": 0.0282366,
+        "total": 6.30005,
+        "up": 6.22262
+      },
+      "d_over_b": 0.00146836,
+      "dn_R": {
+        "sR1": 0.5666666666666667,
+        "sR2": 0.7,
+        "yR1": 0.95,
+        "yR2": 1.15
+      },
+      "epsL": 0.06,
+      "kd": 0.55,
+      "ku": 0.45,
+      "s_over_b": 0.0310422,
+      "u_over_t": 0.00200556,
+      "up_R": {
+        "sR1": 0.55,
+        "sR2": 0.55,
+        "yR1": 0.08,
+        "yR2": 0.24
+      }
+    },
+    "lepton_overlap_summary": {
+      "file": "overlaps_summary.csv",
+      "note": "yukawa(arb_norm) uses a single normalization y0 chosen so that the heaviest has yukawa=0.01 in that scan output.",
+      "rows": [
+        {
+          "gen": 1,
+          "overlap": 0.0059737710445423,
+          "ratio_to_heaviest": 0.0584658447134299,
+          "yukawa(arb_norm)": 0.0005846584471342
+        },
+        {
+          "gen": 2,
+          "overlap": 2.989237546125112e-05,
+          "ratio_to_heaviest": 0.0002925594182973,
+          "yukawa(arb_norm)": 2.925594182973816e-06
+        },
+        {
+          "gen": 3,
+          "overlap": 0.1021753995657252,
+          "ratio_to_heaviest": 1.0,
+          "yukawa(arb_norm)": 0.01
+        }
+      ]
+    },
+    "quark_geometry_best": {
+      "CKM": {
+        "Vcb": 0.1524931449274959,
+        "Vub": 0.07198217512864587,
+        "Vus": 0.23352689541810462
+      },
+      "H": {
+        "sH": 0.5140000000000001,
+        "yH": 1.02
+      },
+      "down": {
+        "L_misalign": {
+          "theta12": 0.12,
+          "theta13": 0.03,
+          "theta23": 0.01
+        },
+        "R": {
+          "sR": [
+            0.5666666666666667,
+            0.7,
+            0.31
+          ],
+          "yR": [
+            0.95,
+            1.15,
+            1.02
+          ]
+        },
+        "epsL": 0.06,
+        "kd": 0.55,
+        "ratios": {
+          "d/b": 0.0014683633943006964,
+          "s/b": 0.03104218533744171
+        }
+      },
+      "targets": {
+        "Vcb": 0.0422,
+        "Vub": 0.00394,
+        "Vus": 0.2243,
+        "c_over_t": 0.007,
+        "d_over_b": 0.0012,
+        "s_over_b": 0.024,
+        "u_over_t": 1.2e-05
+      },
+      "up": {
+        "L": {
+          "sL": [
+            0.6425000000000001,
+            0.39250000000000007,
+            0.6125
+          ],
+          "yL_base": [
+            -1.55,
+            -1.8199999999999998,
+            -0.5499999999999999
+          ]
+        },
+        "R": {
+          "sR": [
+            0.55,
+            0.55,
+            0.31
+          ],
+          "yR": [
+            0.08,
+            0.24,
+            1.02
+          ]
+        },
+        "ku": 0.45,
+        "ratios": {
+          "c/t": 0.12892282529085886,
+          "u/t": 0.0020055634823384176
+        }
+      }
+    },
+    "scripts": {
+      "extract_string_geometry": "extract_string_geometry.py",
+      "lepton_scan": "sfv_lepton_scan.py",
+      "quark_scan": "sfv_quark_scan.py",
+      "yukawa_from_overlaps": "yukawa_from_overlaps.py"
+    },
+    "string_geometry_baseline": {
+      "meta": {
+        "mu_eff_H": 1.0,
+        "mu_eff_L": 1.0,
+        "mu_eff_R": 1.0
+      },
+      "mode": "direct_from_settling",
+      "sH": 0.5140000000000001,
+      "sL": [
+        0.6425000000000001,
+        0.6425000000000001,
+        0.6425000000000001
+      ],
+      "sR": [
+        0.6425000000000001,
+        0.6425000000000001,
+        0.6425000000000001
+      ],
+      "source": "D:\\BaseAI2\\scipy\\SFVtoLepton\\settling_output.csv",
+      "yH": 1.02,
+      "yL": [
+        -1.55,
+        -0.88,
+        -0.35
+      ],
+      "yR": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "string_geometry_best_leptons": {
+      "sH": 0.5140000000000001,
+      "sL": [
+        0.6425000000000001,
+        0.39250000000000007,
+        0.6125
+      ],
+      "sR": [
+        0.6425000000000001,
+        0.6425000000000001,
+        0.6425000000000001
+      ],
+      "yH": 1.02,
+      "yL": [
+        -1.55,
+        -1.8199999999999998,
+        -0.5499999999999999
+      ],
+      "yR": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}
