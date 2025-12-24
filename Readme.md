@@ -34,7 +34,7 @@ The full write-up is included as:
 **Inputs**
 - `sfv_dsb_calibration.json` (your consolidated SFV/dSB calibration pack)
 - `quark_geometry_best.json` (quark localization geometry)
-- `background_profile.csv` (bounce profile; used for wall FWHM and \(R/w\))
+- `background_profile.csv` (bounce profile; used for wall FWHM and \(R/w\)) GENEREATED with goldenRunDetails_v4f_more3_1078.py
 
 **Paper**
 - `SFVdSB_StrongCP_RouteII_BulkAxion.tex`
@@ -51,3 +51,4 @@ The full write-up is included as:
 Install (example):
 ```bash
 pip install numpy scipy
+
